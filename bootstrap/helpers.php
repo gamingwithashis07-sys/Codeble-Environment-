@@ -119,7 +119,7 @@ if (!function_exists('tomorrow')) {
 if (!function_exists('yesterday')) {
     function yesterday(): Carbon\Carbon
     {
-        return new Carbon\Carbon()->subDay()->startOfDay();
+        return (new Carbon\Carbon())->subDay()->startOfDay();
     }
 }
 
