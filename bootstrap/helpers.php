@@ -105,14 +105,14 @@ if (!function_exists('now')) {
 if (!function_exists('today')) {
     function today(): Carbon\Carbon
     {
-        return new Carbon\Carbon()->startOfDay();
+        return (new Carbon\Carbon())->startOfDay();
     }
 }
 
 if (!function_exists('tomorrow')) {
     function tomorrow(): Carbon\Carbon
     {
-        return new Carbon\Carbon()->addDay()->startOfDay();
+        return (new Carbon\Carbon())->addDay()->startOfDay();
     }
 }
 

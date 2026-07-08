@@ -13,19 +13,6 @@ parameters:
         - storage/*
         - bootstrap/*
     reportUnmatchedIgnoredErrors: true
-    reportUnusedGenericClassLevelType: true
-    reportUnusedGenericFunctionLevelType: true
-    reportUnusedGenericMethodLevelType: true
-    reportUnusedPropertyLevelType: true
-    reportMaybes: true
-    reportAlwaysUsedLevelType: true
     treatPhpDocTypesAsCertain: false
     checkMissingIterableValueType: true
     checkGenericClassInNonGenericObjectType: true
-    checkDocCommentType: true
-    checkArgumentsPassedByReference: true
-    checkAlwaysExists: true
-    checkUninitializedProperties: true
-    checkPossiblyNonexistentFunctionCall: true
-    checkPossiblyNonexistentMethodCall: true
-    checkPossiblyNonexistentPropertyOffset: true
