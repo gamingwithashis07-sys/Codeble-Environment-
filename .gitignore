@@ -1,0 +1,81 @@
+# LoveGem Framework .gitignore
+
+# Dependencies
+/vendor/
+composer.lock
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Encryption Keys
+.encryption_key
+*.key
+*.pem
+
+# Database
+storage/database.sqlite
+*.db
+*.sqlite
+
+# Logs
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Sessions
+storage/sessions/*
+!storage/sessions/.gitkeep
+
+# Cache
+storage/cache/*
+!storage/cache/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.phpstorm.meta.php
+_n idehelper*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml.bak
+
+# PHPStan
+phpstan.neon.bak
+
+# PHP-CS-Fixer
+.php-cs-fixer.cache
+
+# Composer
+composer.phar
+
+# Node (if using frontend)
+node_modules/
+npm-debug.log
+
+# Build
+/build/
+/dist/
+
+# Temp files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Test coverage
+coverage/
+*.cover
+
+# Logs
+*.log
