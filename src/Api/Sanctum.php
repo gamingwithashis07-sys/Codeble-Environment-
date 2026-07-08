@@ -13,6 +13,7 @@ class Sanctum
 
     protected static ?object $actingAs = null;
 
+    /** @var array<int, string> */
     protected static array $actingAsAbilities = ['*'];
 
     public function __construct(Application $app)
@@ -20,6 +21,10 @@ class Sanctum
         $this->app = $app;
     }
 
+    /**
+     * @param array<int, string> $abilities
+     * @return array<string, string>
+     */
     public static function createApiToken(object $user, array $abilities = ['*']): array
     {
         $token = Str::random(60);
@@ -38,6 +43,9 @@ class Sanctum
         ];
     }
 
+    /**
+     * @param array<int, string> $abilities
+     */
     public static function createTestToken(object $user, array $abilities = ['*']): string
     {
         $token = Str::random(60);
@@ -66,6 +74,9 @@ class Sanctum
         return (bool) $user->apiTokens()->delete();
     }
 
+    /**
+     * @param array<int, string> $abilities
+     */
     public static function actingAs(object $user, array $abilities = ['*']): void
     {
         static::$actingAs = $user;
