@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/lovegem/framework/v/stable)](https://packagist.org/packages/lovegem/framework)
 [![License](https://poser.pugx.org/lovegem/framework/license)](https://github.com/lovegem-framework/lovegem/blob/main/LICENSE)
 [![PHP Version](https://img.shields.io/packagist/php-v/lovegem/framework)](https://packagist.org/packages/lovegem/framework)
-[![Build Status](https://github.com/lovegem-framework/lovegem/actions/workflows/ci.yml/badge.svg)](https://github.com/lovegem-framework/lovegem/actions)
+[![Build Status](https://github.com/gamingwithashis07-sys/Codeble-Environment-/actions/workflows/ci.yml/badge.svg)](https://github.com/gamingwithashis07-sys/Codeble-Environment-/actions)
 [![Code Style](https://img.shields.io/badge/code%20style-PSR--12-blue)](https://www.php-fig.org/psr/psr-12/)
 [![Security](https://img.shields.io/badge/security-first-9cf)](https://lovegem.dev/security)
 
@@ -665,9 +665,7 @@ If LoveGem Framework helped you, please give us a ⭐ on GitHub!
 ## 📧 Contact
 
 - **Website**: [https://lovegem.dev](https://lovegem.dev)
-- **Twitter**: [@lovegemframework](https://twitter.com/lovegemframework)
-- **GitHub**: [https://github.com/lovegem-framework](https://github.com/lovegem-framework)
-- **Email**: hello@lovegem.dev
+- **GitHub**: [https://github.com/gamingwithashis07-sys/Codeble-Environment-](https://github.com/gamingwithashis07-sys/Codeble-Environment-)
 
 ---
 
