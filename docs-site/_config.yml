@@ -1,0 +1,33 @@
+title: LoveGem Framework
+description: Laravel se better! Privacy-first PHP framework with advanced features.
+theme: jekyll-theme-cayman
+url: https://gamingwithashis07-sys.github.io
+baseurl: /Codeble-Environment-
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude
+exclude:
+  - vendor/
+  - node_modules/
+  - src/
+  - tests/
+  - bootstrap/
+  - config/
+  - database/
+  - storage/
+
+# Include
+include:
+  - docs-site/
+
+# Front matter
+defaults:
+  - scope:
+      path: "docs-site"
+    values:
+      layout: default

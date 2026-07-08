@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveGem Framework - Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        /* Installation Section */
+        .installation {
+            padding: 80px 0;
+            background: #f5f5f5;
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 25px;
+            border-radius: 10px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        .code-block code {
+            color: #9cdcfe;
+        }
+        
+        .code-block .comment {
+            color: #6a9955;
+        }
+        
+        .code-block .keyword {
+            color: #569cd6;
+        }
+        
+        .code-block .string {
+            color: #ce9178;
+        }
+        
+        /* Quick Start Section */
+        .quickstart {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">💎 LoveGem</a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#installation">Installation</a>
+                <a href="#quickstart">Quick Start</a>
+                <a href="https://github.com/gamingwithashis07-sys/Codeble-Environment-" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>💎 LoveGem Framework</h1>
+            <p>Laravel se better! Privacy-first PHP framework with advanced features.</p>
+            <div>
+                <a href="#installation" class="btn">Get Started</a>
+                <a href="https://github.com/gamingwithashis07-sys/Codeble-Environment-" class="btn btn-outline" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">✨ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Privacy First</h3>
+                    <p>Built-in encryption with libsodium, GDPR compliance, and secure defaults.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized performance with caching, queue system, and lazy collections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Blade Templating</h3>
+                    <p>Beautiful templates with layouts, components, and custom directives.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗄️</div>
+                    <h3>Eloquent ORM</h3>
+                    <p>Beautiful ActiveRecord implementation with relationships and scopes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Built-in Auth</h3>
+                    <p>Complete authentication system with guards, tokens, and API support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Artisan CLI</h3>
+                    <p>Powerful command-line interface with 20+ built-in commands.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Task Scheduler</h3>
+                    <p>Cron-like task scheduling for automated jobs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>HTTP Client</h3>
+                    <p>Built-in HTTP client for API calls and webhooks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Notifications</h3>
+                    <p>Multi-channel notification system (Email, SMS, Push).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation" id="installation">
+        <div class="container">
+            <h2 class="section-title">📦 Installation</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Install via Composer</h3>
+                    <div class="code-block" data-lang="bash">
+                        <code>composer require lovegem/framework</code>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Generate Application Key</h3>
+                    <div class="code-block" data-lang="bash">
+                        <code>php artisan key:generate</code>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Start Development Server</h3>
+                    <div class="code-block" data-lang="bash">
+                        <code>php artisan serve</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quickstart" id="quickstart">
+        <div class="container">
+            <h2 class="section-title">🚀 Quick Start</h2>
+            
+            <h3 style="margin-bottom: 20px;">Create Your First Route</h3>
+            <div class="code-block" data-lang="php">
+                <code><span class="comment">&lt;?php</span>
+
+<span class="keyword">use</span> LoveGem\Support\Facades\Route;
+
+Route::get(<span class="string">'/'</span>, <span class="keyword">function</span> () {
+    <span class="keyword">return</span> <span class="string">'Hello from LoveGem!'</span>;
+});</code>
+            </div>
+            
+            <h3 style="margin: 30px 0 20px;">Create a Model</h3>
+            <div class="code-block" data-lang="bash">
+                <code>php artisan make:model Post</code>
+            </div>
+            
+            <div class="code-block" data-lang="php">
+                <code><span class="comment">&lt;?php</span>
+
+<span class="keyword">namespace</span> App\Models;
+
+<span class="keyword">use</span> LoveGem\Database\Eloquent\Model;
+
+<span class="keyword">class</span> Post <span class="keyword">extends</span> Model
+{
+    <span class="keyword">protected</span> $fillable = [<span class="string">'title'</span>, <span class="string">'content'</span>];
+}</code>
+            </div>
+            
+            <h3 style="margin: 30px 0 20px;">Use Eloquent</h3>
+            <div class="code-block" data-lang="php">
+                <code><span class="comment">// Get all posts</span>
+$posts = Post::all();
+
+<span class="comment">// Create a post</span>
+Post::create([
+    <span class="string">'title'</span> => <span class="string">'My First Post'</span>,
+    <span class="string">'content'</span> => <span class="string">'Hello World!'</span>,
+]);
+
+<span class="comment">// Find by ID</span>
+$post = Post::find(1);
+
+<span class="comment">// Where clause</span>
+$posts = Post::where(<span class="string">'active'</span>, true)->get();</code>
+            </div>
+        </div>
+    </section>
+
+    <section class="installation">
+        <div class="container">
+            <h2 class="section-title">📚 Documentation</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Routing</h3>
+                    <p>Learn about routes, middleware, and URL generation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Controllers</h3>
+                    <p>Organize your logic with controllers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Models</h3>
+                    <p>Work with databases using Eloquent ORM.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Views</h3>
+                    <p>Create beautiful templates with Blade.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Authentication</h3>
+                    <p>Secure your application with built-in auth.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cache</h3>
+                    <p>Improve performance with caching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>💎 LoveGem Framework - Laravel se better!</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/gamingwithashis07-sys/Codeble-Environment-" target="_blank">GitHub</a> | 
+                <a href="https://packagist.org/packages/lovegem/framework" target="_blank">Packagist</a>
+            </p>
+            <p style="margin-top: 20px; opacity: 0.7;">Made with ❤️ by LoveGem Community</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
